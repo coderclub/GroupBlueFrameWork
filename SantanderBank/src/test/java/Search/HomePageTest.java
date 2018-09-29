@@ -6,9 +6,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class HomePageTest extends HomePage {
+    HomePage homePage;
     @BeforeMethod
     public void initializing() {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage = PageFactory.initElements(driver, HomePage.class);
     }
     @Test
     public void Header_Taeget_Test(){ Header_Taeget(); }
@@ -22,10 +23,12 @@ public class HomePageTest extends HomePage {
     public void About_Textoption_Test(){About_Textoption();}
     @Test
     public void ATM_BranchLocation_Test(){ATM_BranchLocation();}
+
 //    @Test
 //    public void Search_input_Test(){Search_input();}
     /*@Test
     public void Search_input_Test(){Search_input();}*/
+
     @Test
     public void Login_Test(){Login();}
     @Test
@@ -54,4 +57,6 @@ public class HomePageTest extends HomePage {
     public void Privacy_policy_Header_Test(){Privacy_policy_Header();}
     @Test
     public void Contact_us_Header_Test(){Contact_us_Header();}
+    @Test
+    public void DragDrop2() throws InterruptedException {dragDrop();}
 }
