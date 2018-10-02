@@ -26,7 +26,6 @@ public class XlsDataReaderUtil {
             Object obj[] = {email,passCode, message};
             myData.add(obj);
         }
-
         return  myData;
     }
 }

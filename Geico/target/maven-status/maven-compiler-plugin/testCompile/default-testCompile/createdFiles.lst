@@ -2,5 +2,9 @@ homePage/DropDownTest.class
 DataDrivenTests/LoginTest.class
 DataDrivenTests/TestGoogleSheetsPage.class
 popUp/testPopUp.class
-homePage/NavigationBar.class
+homePage/InsuranceProductTest.class
+DataDrivenTests/InformationAndInsuranceHoverTest.class
+homeOwnersPackage/CustomerInfoTest.class
+screenShot/testScreenShot.class
 homePage/SearchTest.class
+homePage/NavigationBarTest.class

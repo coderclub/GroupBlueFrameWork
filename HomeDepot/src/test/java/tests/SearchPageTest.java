@@ -1,12 +1,10 @@
 package tests;
 
-import base.CommonAPIhd;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.HomePage;
 import pages.SearchPage;
-
 import java.io.IOException;
 
 public class SearchPageTest extends SearchPage {

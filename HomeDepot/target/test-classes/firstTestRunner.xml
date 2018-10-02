@@ -10,11 +10,12 @@
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="68.0"/>
     <parameter name="url" value="https://www.homedepot.com"/>
-
-
+    <test name = "Services of tests">
         <classes>
-        <class name ="base.firstTest" />
+        <class name ="base.FirstTest" />
+            <class name="tests.HandlePopUpTest"/>
+            <class name="tests.HomePageTest"/>
+            <class name="tests.SearchPageTest"/>
         </classes>
     </test>
-
 </suite>

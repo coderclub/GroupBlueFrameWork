@@ -15,7 +15,6 @@ public class SearchPage extends CommonAPIhd {
     public static WebElement searchboxwebelement;
     @FindBy(css = "#headerSearchButton > svg")
     public static WebElement submitbuttonwebelement;
-
     public WebElement getSearchboxwebelement() {
         return searchboxwebelement;
     }

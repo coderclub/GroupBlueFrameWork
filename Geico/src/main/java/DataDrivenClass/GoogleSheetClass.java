@@ -19,8 +19,7 @@ public class GoogleSheetClass extends Login{
         // Build a new authorized API client service.
         Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
-                .get(spreadsheetId, range)
-                .execute();
+                .get(spreadsheetId, range).execute();
         List<List<Object>> values = response.getValues();
         if (values == null || values.size() == 0) {
             return null;

@@ -1,2 +1,4 @@
-base/firstTest.class
-base/BeforeNAfterMethods.class
+base/FirstTest.class
+tests/SearchPageTest.class
+tests/HomePageTest.class
+tests/HandlePopUpTest.class

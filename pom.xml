@@ -14,6 +14,8 @@
         <module>Geico</module>
         <module>HomeDepot</module>
         <module>CUNY</module>
+        <module>Amazon</module>
+        <module>Amazon2</module>
     </modules>
     <dependencyManagement>
         <dependencies>
