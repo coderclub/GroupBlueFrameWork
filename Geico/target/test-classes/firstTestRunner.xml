@@ -35,9 +35,12 @@
             <class name="screenShot.testScreenShot"/>
         </classes>
     </test>
+<<<<<<< Updated upstream
     <test name="homeOwners Insurance Test">
         <classes>
             <class name="homeOwnersPackage.CustomerInfoTest"/>
         </classes>
     </test>
+=======
+>>>>>>> Stashed changes
 </suite>

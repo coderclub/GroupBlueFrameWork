@@ -1,9 +1,59 @@
 package pages;
 
+<<<<<<< Updated upstream
 import base.CommonAPI;
+=======
+import base.CommonAPIhd;
+>>>>>>> Stashed changes
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
+public class HomePage extends CommonAPIhd{
+    @FindBy(css="#container > div:nth-child(2) > div.Header3 > div > div.grid.grid--center-verticle > div.Header3__collapser.col__4-12.col__3-12--sm.col__3-12--md.col__3-12--lg > div > div:nth-child(1) > a > svg > g > path:nth-child(3)")
+    public static WebElement theHomeDepot;
+    @FindBy(css = "#simpleMenuButton > div.SimpleMenu__menu > svg")
+    public static WebElement threeLines;
+@FindBy(css="#myStore > a > span.MyStore__icon > svg")
+public static WebElement balloon;
+@FindBy(css=".MyStore__label")
+public static WebElement toSeeInventory;
+@FindBy(css="#headerMyAccount > div.MyAccount__icon > div > div.HeaderIcon__primary > svg > g > path:nth-child(1)")
+public static WebElement littleMan;
+@FindBy(css="#headerMyAccount > div.MyAccount__icon > div > div.HeaderIcon__primary > svg")
+public static WebElement cart;
+@FindBy(css="#messageBar > div > div > div")
+public static WebElement free2DayDelivery;
+@FindBy(css="#container > div:nth-child(3) > div:nth-child(3) > div.col__12-12.col__12-12--xs.col__12-12--sm.col__12-12--md.col__12-12--lg.col__12-12--xl > div > div > a > img")
+public static WebElement guaranteedWindow;
+@FindBy(css="#container > div:nth-child(3) > div:nth-child(3) > div:nth-child(2) > div > div > a > img")
+public static WebElement redCrossWindow;
+@FindBy(css="#container > div:nth-child(3) > div:nth-child(3) > div:nth-child(3) > div > div > a > img")
+public static WebElement homeDepotFoundationWindow;
+@FindBy(css="#container > div:nth-child(3) > div:nth-child(9) > div:nth-child(2) > div > div:nth-child(2) > div.col__12-12.col__12-12--xs.col__12-12--sm.col__12-12--md.col__12-12--lg.col__12-12--xl.flexbox--center-center > div > h2 > div > span")
+public static WebElement scaryHolloweenDecor;
+@FindBy(css="#container > div:nth-child(3) > div:nth-child(11) > div:nth-child(2) > div > div > a > img")
+public static WebElement theHomeDepotDelivers;
+@FindBy(xpath="//*[@id=\"container\"]/div[2]/div[13]/div[2]/div/h3[2]")
+public static WebElement protectYourHome;
+@FindBy(xpath="//*[@id=\"container\"]/div[2]/div[25]/div/div/div[7]/div/div/h2/div/span")
+public static WebElement popularCategories;
+@FindBy(tagName = "a")
+public static WebElement airConditioner;
+@FindBy(xpath="//*[@id=\"container\"]/div[2]/div[25]/div/div/div[8]/div[2]/div/p[1]/a")
+public static WebElement bathroomVanities;
+@FindBy(tagName ="a")
+public static WebElement blinds;
+@FindBy(css="#container > div:nth-child(3) > div:nth-child(3) > div.col__12-12.col__12-12--xs.col__12-12--sm.col__12-12--md.col__12-12--lg.col__12-12--xl > div > div > a > img")
+public static WebElement joinUsCelebrating;
+@FindBy(css="body > div.QSIFeedBackLink.SI_ehszkP3JIwnjF77_FeedBackLinkContainer > img")
+public static WebElement feedback;
+
+
+
+
+
+<<<<<<< Updated upstream
 public class HomePage extends CommonAPI{
     @FindBy(css="#container > div:nth-child(2) > div.Header3 > div > div.grid.grid--center-verticle > div.Header3__collapser.col__4-12.col__3-12--sm.col__3-12--md.col__3-12--lg > div > div:nth-child(1) > a > svg > g > path:nth-child(4)")
 public static WebElement theHomeDepotMenuBar;
@@ -12,6 +62,9 @@ public static WebElement toSeeInventoryMenuBar;
 @FindBy(css="#myStore > a > span.MyStore__icon > svg")
 public static WebElement balloonSignMenuBar;
 @FindBy(css = "#headerSearch")
+=======
+    @FindBy(css = "#headerSearch")
+>>>>>>> Stashed changes
     public static WebElement searchBox;
     @FindBy(css = ".SearchBox__buttonIcon")
     public static WebElement submitButton;
@@ -63,6 +116,69 @@ public void toSeeInventoryMenuBar(){
  public void balloonSignMenuBar(){
         balloonSignMenuBar.click();
  }
+
+    public void theHomeDepot(){
+        theHomeDepot.click();
+    }
+public void threeLines(){
+       threeLines.click();
+}
+public void balloon(){
+        balloon.click();
+}
+public void toSeeInventory(){
+        toSeeInventory.click();
+}
+public void littleMan(){
+        littleMan.click();
+}
+public void cart(){
+        cart.click();
+}
+public void free2DayDelivery(){
+        free2DayDelivery.click();
+}
+public void guaranteedWindow(){
+        guaranteedWindow.click();
+}
+public void redCrossWindow(){
+        redCrossWindow.click();
+}
+public void homeDepotFoundationWindow(){
+        homeDepotFoundationWindow.click();
+}
+public void scaryHolloweenDecor(){
+        scaryHolloweenDecor.click();
+}
+public void theHomeDepotDelivers(){
+        theHomeDepotDelivers.click();
+}
+public void protectYourHome(){
+        protectYourHome.click();
+}
+public void popularCategories(){
+        popularCategories.click();
+}
+public void airConditioner(){
+        airConditioner.click();
+}
+public void bathroomVanities(){
+        bathroomVanities.click();
+}
+public void blinds(){
+        blinds.click();
+}
+public void joinUsCelebrating(){
+        joinUsCelebrating.click();
+}
+public void feedback(){
+        feedback.click();
+}
+
+
+
+
+
 
     public void searchBox() {
         searchBox.sendKeys("iphone");
@@ -129,6 +245,7 @@ public void specialsOrders(){
 public void localAd(){
     localAd.click();
 }
+
 
 }
 

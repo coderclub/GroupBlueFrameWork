@@ -6,9 +6,12 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+<<<<<<< Updated upstream
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
+=======
+>>>>>>> Stashed changes
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
@@ -22,7 +25,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,8 +35,15 @@ public class CommonClass{
     public static WebDriver driver = null;
     public static Actions builder = null;
     public static WebDriverWait wait = null ;
+<<<<<<< Updated upstream
     @BeforeMethod
     public void setup() throws MalformedURLException {
+=======
+
+    @BeforeMethod
+    public void setup() throws MalformedURLException {
+        //setUpBrowserStack();
+>>>>>>> Stashed changes
         System.setProperty("webdriver.chrome.driver","/Users/afia/IdeaProjects/GroupBlueFrameWork/Generic/DriversForBrowser/chromedriver");
         //setUpBrowserStack();
         driver = new ChromeDriver();
@@ -76,6 +85,10 @@ public class CommonClass{
 
         if (result.getStatus() == 1) {
             ExtentTestManager.getTest().log(LogStatus.PASS, "Test Passed");
+<<<<<<< Updated upstream
+=======
+//            System.out.println();
+>>>>>>> Stashed changes
         } else if (result.getStatus() == 2) {
             ExtentTestManager.getTest().log(LogStatus.FAIL, getStackTrace(result.getThrowable()));
         } else if (result.getStatus() == 3) {
@@ -95,7 +108,11 @@ public class CommonClass{
         Date date = new Date();
         df.format(date);
 
+<<<<<<< Updated upstream
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+=======
+        File file = ((TakesScreenshot) CommonClass.driver).getScreenshotAs(OutputType.FILE);
+>>>>>>> Stashed changes
         try {
             FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "/screenshots/"+screenshotName+" "+df.format(date)+".png"));
             System.out.println("Screenshot captured");
@@ -121,7 +138,11 @@ wait.until(ExpectedConditions.visibilityOf(element));
     public void waitToBeVisible(String xpathLocator){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
     }
+<<<<<<< Updated upstream
     public void setUpBrowserStack() throws MalformedURLException {
+=======
+    /*public void setUpBrowserStack() throws MalformedURLException {
+>>>>>>> Stashed changes
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("browser","chrome");
         cap.setCapability("browser_version","68.0");
@@ -130,5 +151,5 @@ wait.until(ExpectedConditions.visibilityOf(element));
         String browserStackUrl = "https://afiafarjana1:9Z5U2U9zmF6Uq6QUr9pi@hub-cloud.browserstack.com/wd/hub";
         URL serverUrl = new URL(browserStackUrl);
         driver = new RemoteWebDriver(serverUrl,cap);
-    }
+    }*/
 }

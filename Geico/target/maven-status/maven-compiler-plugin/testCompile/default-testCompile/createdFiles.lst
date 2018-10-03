@@ -4,7 +4,10 @@ DataDrivenTests/TestGoogleSheetsPage.class
 popUp/testPopUp.class
 homePage/InsuranceProductTest.class
 DataDrivenTests/InformationAndInsuranceHoverTest.class
+<<<<<<< Updated upstream
 homeOwnersPackage/CustomerInfoTest.class
+=======
+>>>>>>> Stashed changes
 screenShot/testScreenShot.class
 homePage/SearchTest.class
 homePage/NavigationBarTest.class

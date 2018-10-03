@@ -1,5 +1,9 @@
 base/XlsDataReaderUtil.class
+<<<<<<< Updated upstream
 reporting/ExtentManager1.class
+=======
+base/CommonAPIhd.class
+>>>>>>> Stashed changes
 base/ReusableAPI.class
 base/CommonAPI.class
 reporting/ExtentTestManager.class

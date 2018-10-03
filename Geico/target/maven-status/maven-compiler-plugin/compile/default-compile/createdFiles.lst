@@ -7,6 +7,9 @@ DataDrivenClass/GoogleSheetClass.class
 popUpHandle/getQuotePopUp.class
 homePage/NavigationBar.class
 DataDrivenClass/Login.class
+<<<<<<< Updated upstream
 homeOwnersPackage/CustomerInfo.class
+=======
+>>>>>>> Stashed changes
 homePage/DropDown.class
 DataDrivenClass/XlsDataReaderUtil.class
