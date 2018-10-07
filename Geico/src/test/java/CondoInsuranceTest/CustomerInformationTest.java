@@ -1,15 +1,10 @@
 package CondoInsuranceTest;
 
 import CondoInsurance.CustomerInformation;
-import homePage.InsuranceProducts;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import HomePage.InsuranceProducts;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class CustomerInformationTest extends CustomerInformation {
     @BeforeMethod

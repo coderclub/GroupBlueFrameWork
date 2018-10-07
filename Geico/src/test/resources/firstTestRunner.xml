@@ -10,33 +10,33 @@
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="68.0"/>
     <parameter name="url" value="https://www.geico.com"/>
-      <test name = "homePage Test">
+      <test name = "HomePage Test">
           <classes>
-              <class name="homePage.FeedbackTest"/>
-            <class name="homePage.DropDownTest"/>
-            <class name="homePage.InsuranceProductTest"/>
-            <class name ="testNavigationBar.NavigationBarTest" />
-            <class name="homePage.SearchTest"/>
+              <class name="HomePage.FeedbackTest"/>
+            <class name="HomePage.DropDownTest"/>
+            <class name="HomePage.InsuranceProductTest"/>
+            <class name ="NavBarTest.NavigationBarTest" />
+            <class name="HomePage.SearchTest"/>
         </classes>
     </test>
     <test name="DataDriven Test">
   <classes>
-      <class name="testNavigationBar.InformationAndInsuranceMenuTest"/>
-      <class name="homePage.TestLoginExcelSheet"/>
-      <class name="homePage.TestLoginGoogleSheets"/>
+      <class name="NavBarTest.InformationANdInsuranceMenuTest"/>
+      <class name="HomePage.TestLoginExcelSheet"/>
+      <class name="HomePage.TestLoginGoogleSheets"/>
   </classes>
     </test>
-    <test name ="screenShot test">
+    <test name ="ScreenShotTest test">
         <classes>
-            <class name="screenShot.testScreenShot"/>
+            <class name="ScreenShotTest.testScreenShot"/>
         </classes>
     </test>
     <test name="Insurance Test">
         <classes>
-            <class name="autoInsurancePackage.AutoInsuranceCustomerInfo"/>
-            <class name="autoInsurancePackage.getQuotePopUp"/>
-            <class name="homeOwnersPackage.CustomerInfoTest"/>
-            <class name="homeOwnersPackage.PromptToCall"/>
+            <class name="AutoInsurancePackage.AutoInsuranceCustomerInfo"/>
+            <class name="AutoInsurancePackage.getQuotePopUp"/>
+            <class name="HomeOwnersPackage.CustomerInfoTest"/>
+            <class name="HomeOwnersPackage.PromptToCall"/>
             <class name="CondoInsuranceTest.CustomerInformationTest"/>
             <class name="RentersInsuranceTest.PropertySalesTest"/>
             <class name="RentersInsuranceTest.RentersPropertySalesTest"/>

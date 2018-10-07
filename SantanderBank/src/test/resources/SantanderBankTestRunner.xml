@@ -17,7 +17,7 @@
             <!--<class name="Search.ATMBranchPageTest"/>-->
             <!--<class name="Search.BusinessTextOptionPageTest"/>-->
             <!--<class name="Search.CorporateTextOptionPageTest"/>-->
-            <!--<class name="Search.HomePageTest"/>-->
+            <!--<class name="Search.HomePage"/>-->
             <!--<class name="Search.LoginPageTest"/>-->
             <!--<class name="Search.PageSearch_option_attempt_Test"/>-->
             <!--&lt;!&ndash;<class name="Search.PersonalTextOptionPageTest"/>&ndash;&gt;-->
