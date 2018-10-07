@@ -13,8 +13,7 @@ public class DropDownTest extends DropDown{
     }
     @Test
     public void testDropDownList() {
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {
-        }.getClass().getEnclosingMethod().getName()));
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object() {}.getClass().getEnclosingMethod().getName()));
         compareDropDownData();
     }
 }

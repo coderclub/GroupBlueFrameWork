@@ -22,7 +22,7 @@
     <test name="DataDriven Test">
   <classes>
       <class name="NavBarTest.InformationANdInsuranceMenuTest"/>
-      <class name="HomePage.TestLoginExcelSheet"/>
+      <class name="HomePage.TestLoginWithExcelExcelSheet"/>
       <class name="HomePage.TestLoginGoogleSheets"/>
   </classes>
     </test>

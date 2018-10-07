@@ -6,11 +6,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import reporting.TestLogger;
 
-public class TestLoginExcelSheet extends Login {
-    Login loginObject;
+public class TestLoginWithExcelExcelSheet extends LoginWithExcel {
+    LoginWithExcel loginObject;
     @BeforeMethod
     public void init(){
-        loginObject = PageFactory.initElements(driver,Login.class);
+        loginObject = PageFactory.initElements(driver, LoginWithExcel.class);
     }
     @Test(dataProvider = "supplyData")
     public void signInWithInvalidIDPassUsingExcel(String email, String passCode, String message) throws InterruptedException {

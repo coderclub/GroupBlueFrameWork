@@ -1,6 +1,6 @@
 package HomePage;
 
-import DataReaderCommonClass.XlsDataReaderUtil;
+import base.XlsDataReaderUtil;
 import base.CommonClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ import reporting.TestLogger;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Login extends CommonClass{
+public class LoginWithExcel extends CommonClass{
     @FindBy(id = "userName")
     public static WebElement loginTextBox;
     @FindBy(id = "userPassword")
@@ -24,7 +24,7 @@ public class Login extends CommonClass{
     public static WebElement errorMessage;
 
     public static void navigateToLoginPage(){
-        TestLogger.log(Login.class.getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        TestLogger.log(LoginWithExcel.class.getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         driver.navigate().to("https://ecams.geico.com/ecams/login.xhtml?r=true");
     }
     public void clickSubmit(){
@@ -52,7 +52,7 @@ public class Login extends CommonClass{
     public Iterator<Object[]> supplyData(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         ArrayList<Object[]> testData =
-                XlsDataReaderUtil.getDataFromExcelFM();
+                XlsDataReaderUtil.getDataFromExcel();
         return testData.iterator();
     }
 }

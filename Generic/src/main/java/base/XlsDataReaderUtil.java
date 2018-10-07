@@ -13,7 +13,7 @@ public class XlsDataReaderUtil {
     ArrayList<Object[]> myData = new ArrayList<Object[]>();
     try {
 
-        reader = new Xls_Reader("/Users/URMI/Desktop/GroupBlueFrameWork/SantanderBank/page/ahmed.xls");
+        reader = new Xls_Reader("/Users/afia/IdeaProjects/GroupBlueFrameWork/Geico/data/DataFile3.xls");
     }
     catch (Exception e){
         e.printStackTrace();

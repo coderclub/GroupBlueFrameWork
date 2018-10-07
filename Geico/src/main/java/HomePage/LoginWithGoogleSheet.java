@@ -1,6 +1,5 @@
-package DataReaderCommonClass;
+package HomePage;
 
-import HomePage.Login;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.ValueRange;
 import org.openqa.selenium.support.PageFactory;
@@ -12,8 +11,8 @@ import java.util.List;
 
 import static base.GoogleSheetReader.getSheetsService;
 
-public class GoogleSheetClass extends Login {
-    Login loginObject = PageFactory.initElements(driver,Login.class);
+public class LoginWithGoogleSheet extends LoginWithExcel {
+    LoginWithExcel loginObject = PageFactory.initElements(driver, LoginWithExcel.class);
 
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
