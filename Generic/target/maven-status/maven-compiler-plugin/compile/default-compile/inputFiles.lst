@@ -1,29 +1,17 @@
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/XlsDataReaderUtil.java
-<<<<<<< Updated upstream
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentManager1.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/ReusableAPI.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentTestManager.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/googleAPI/XlsDataReaderUtil.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/googleAPI/GoogleSheetReader.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/cloudEnv/BrowserStack.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/googleAPI/Xls_Reader.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/googleAPI/ConnectToMongoDB.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/reporting/TestLogger.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/GoogleSheetReader.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/CollectionApi.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/Xls_Reader.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/CommonClass.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/CommonAPI.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/CommonAPIhd.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentManager.java
-=======
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/CollectionApi.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/Xls_Reader.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/ReusableAPI.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentTestManager.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/CommonClass.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/CommonAPIhd.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/reporting/TestLogger.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentManager.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/src/main/java/base/GoogleSheetReader.java
->>>>>>> Stashed changes
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/CommonAPIhd.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/reporting/TestLogger.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/googleAPI/ConnectToMongoDB.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/XlsDataReaderUtil.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/Xls_Reader.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentManager.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/googleAPI/GoogleSheetReader.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/googleAPI/Xls_Reader.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/CollectionApi.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/cloudEnv/BrowserStack.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentManager1.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/CommonAPI.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/GoogleSheetReader.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/ReusableAPI.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/reporting/ExtentTestManager.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/googleAPI/XlsDataReaderUtil.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/src/main/java/base/CommonClass.java

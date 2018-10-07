@@ -6,12 +6,11 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-<<<<<<< Updated upstream
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
-=======
->>>>>>> Stashed changes
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
@@ -31,36 +30,34 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class CommonClass{
+public class CommonClass {
     public static WebDriver driver = null;
     public static Actions builder = null;
-    public static WebDriverWait wait = null ;
-<<<<<<< Updated upstream
-    @BeforeMethod
-    public void setup() throws MalformedURLException {
-=======
+    public static WebDriverWait wait = null;
 
     @BeforeMethod
     public void setup() throws MalformedURLException {
         //setUpBrowserStack();
->>>>>>> Stashed changes
-        System.setProperty("webdriver.chrome.driver","/Users/afia/IdeaProjects/GroupBlueFrameWork/Generic/DriversForBrowser/chromedriver");
+
+        System.setProperty("webdriver.chrome.driver", "/Users/afia/IdeaProjects/GroupBlueFrameWork/Generic/DriversForBrowser/chromedriver");
         //setUpBrowserStack();
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         builder = new Actions(driver);
-        wait = new WebDriverWait(driver,10);
-       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, 10);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://www.geico.com/");
         driver.manage().window().fullscreen();
 
     }
 
     public static ExtentReports extent;
+
     @BeforeSuite
     public void extentSetup(ITestContext context) {
         extent = ExtentManager.getInstance();
     }
+
     @BeforeMethod
     public void startExtent(Method method) {
         String className = method.getDeclaringClass().getSimpleName();
@@ -68,12 +65,14 @@ public class CommonClass{
         ExtentTestManager.startTest(method.getName());
         ExtentTestManager.getTest().assignCategory(className);
     }
+
     protected String getStackTrace(Throwable t) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         t.printStackTrace(pw);
         return sw.toString();
     }
+
     @AfterMethod
     public void afterEachTestMethod(ITestResult result) {
         ExtentTestManager.getTest().getTest().setStartedTime(getTime(result.getStartMillis()));
@@ -85,10 +84,9 @@ public class CommonClass{
 
         if (result.getStatus() == 1) {
             ExtentTestManager.getTest().log(LogStatus.PASS, "Test Passed");
-<<<<<<< Updated upstream
-=======
+
 //            System.out.println();
->>>>>>> Stashed changes
+
         } else if (result.getStatus() == 2) {
             ExtentTestManager.getTest().log(LogStatus.FAIL, getStackTrace(result.getThrowable()));
         } else if (result.getStatus() == 3) {
@@ -102,22 +100,23 @@ public class CommonClass{
         driver.quit();
     }
 
-    public static void captureScreenshot(WebDriver driver, String screenshotName){
+    public static void captureScreenshot(WebDriver driver, String screenshotName) {
 
         DateFormat df = new SimpleDateFormat("(MM.dd.yyyy-HH:mma)");
         Date date = new Date();
         df.format(date);
 
-<<<<<<< Updated upstream
-        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-=======
+
+        //File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
         File file = ((TakesScreenshot) CommonClass.driver).getScreenshotAs(OutputType.FILE);
->>>>>>> Stashed changes
+
         try {
-            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "/screenshots/"+screenshotName+" "+df.format(date)+".png"));
+            FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "/screenshots/" + screenshotName + " " + df.format(date) + ".png"));
             System.out.println("Screenshot captured");
         } catch (Exception e) {
-            System.out.println("Exception while taking screenshot "+e.getMessage());;
+            System.out.println("Exception while taking screenshot " + e.getMessage());
+            ;
         }
 
     }
@@ -126,21 +125,23 @@ public class CommonClass{
     public void generateReport() {
         extent.close();
     }
+
     private Date getTime(long millis) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
         return calendar.getTime();
     }
 
-    public void waitToBeVisible(WebElement element){
-wait.until(ExpectedConditions.visibilityOf(element));
+    public void waitToBeVisible(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
-    public void waitToBeVisible(String xpathLocator){
+
+    public void waitToBeVisible(String xpathLocator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
     }
-<<<<<<< Updated upstream
+
     public void setUpBrowserStack() throws MalformedURLException {
-=======
+
     /*public void setUpBrowserStack() throws MalformedURLException {
 >>>>>>> Stashed changes
         DesiredCapabilities cap = new DesiredCapabilities();
@@ -152,4 +153,5 @@ wait.until(ExpectedConditions.visibilityOf(element));
         URL serverUrl = new URL(browserStackUrl);
         driver = new RemoteWebDriver(serverUrl,cap);
     }*/
+    }
 }

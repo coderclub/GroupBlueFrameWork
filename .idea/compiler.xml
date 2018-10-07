@@ -15,7 +15,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Amazon" target="1.8" />
       <module name="CUNY" target="1.8" />
       <module name="SantanderBank" target="1.8" />
     </bytecodeTargetLevel>

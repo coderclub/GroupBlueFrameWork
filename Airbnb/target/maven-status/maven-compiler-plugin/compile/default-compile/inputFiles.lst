@@ -1,12 +1,12 @@
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/UsingGoogleAPI/GoogleSheetsPage.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/FrontPage/Booking.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/PageObject/PageObject.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/DatabaseConnection/House.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/Elements/LoginBox.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/SignIn/SignInPage.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/util/breakdownMethodToSetUp.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/FrontPage/SearchForPlaces.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/DatabaseConnection/DBConnection.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/Elements/FrontPageElements.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/DatabaseConnection/User.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Airbnb/src/main/java/FrontPage/BecomeAHost.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/DatabaseConnection/DBConnection.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/FrontPage/BecomeAHost.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/DatabaseConnection/House.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/PageObject/PageObject.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/util/breakdownMethodToSetUp.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/DatabaseConnection/User.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/UsingGoogleAPI/GoogleSheetsPage.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/FrontPage/Booking.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/Elements/FrontPageElements.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/FrontPage/SearchForPlaces.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/Elements/LoginBox.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Airbnb/src/main/java/SignIn/SignInPage.java

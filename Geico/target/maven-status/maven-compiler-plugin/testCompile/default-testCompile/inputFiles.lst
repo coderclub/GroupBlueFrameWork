@@ -1,13 +1,10 @@
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/homePage/InsuranceProductTest.java
-<<<<<<< Updated upstream
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/homeOwnersPackage/CustomerInfoTest.java
-=======
->>>>>>> Stashed changes
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/DataDrivenTests/TestGoogleSheetsPage.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/homePage/DropDownTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/homePage/NavigationBarTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/DataDrivenTests/LoginTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/popUp/testPopUp.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/homePage/SearchTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/DataDrivenTests/InformationAndInsuranceHoverTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Geico/src/test/java/screenShot/testScreenShot.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/homeOwnersPackage/CustomerInfoTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/homePage/InsuranceProductTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/homePage/SearchTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/DataDrivenTests/LoginTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/screenShot/testScreenShot.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/popUp/testPopUp.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/DataDrivenTests/TestGoogleSheetsPage.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/homePage/NavigationBarTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/homePage/DropDownTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/Geico/src/test/java/DataDrivenTests/InformationAndInsuranceHoverTest.java

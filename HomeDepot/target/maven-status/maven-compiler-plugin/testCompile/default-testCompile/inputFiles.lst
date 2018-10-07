@@ -1,9 +1,5 @@
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/HomeDepot/src/test/java/tests/HomePageTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/HomeDepot/src/test/java/tests/HandlePopUpTest.java
-<<<<<<< Updated upstream
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/HomeDepot/src/test/java/tests/SearchPageTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/HomeDepot/src/test/java/base/FirstTest.java
-=======
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/HomeDepot/src/test/java/base/firstTest.java
-/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/HomeDepot/src/test/java/tests/SearchPageTest.java
->>>>>>> Stashed changes
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/HomeDepot/src/test/java/tests/BodyPageTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/HomeDepot/src/test/java/tests/SearchPageTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/HomeDepot/src/test/java/base/firstTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/HomeDepot/src/test/java/tests/HomePageTest.java
+/Users/renxing/IdeaProjects/GroupBlueFrameWork/HomeDepot/src/test/java/tests/HandlePopUpTest.java

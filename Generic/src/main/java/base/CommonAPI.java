@@ -91,8 +91,8 @@ public class CommonAPI {
     }
 
     public WebDriver driver = null;
-    public String browserstack_username= "";//renxingxing1
-    public String browserstack_accesskey = "";//DyE5Dpu9u1W4WLaQT9yn
+    public String browserstack_username= "renxingxing1";//renxingxing1
+    public String browserstack_accesskey = "DyE5Dpu9u1W4WLaQT9yn";//DyE5Dpu9u1W4WLaQT9yn
     public String saucelabs_username = "";//renxing18
     public String saucelabs_accesskey = "";//50475992-7e57-4322-b487-3a3ced6282d3
 
@@ -101,7 +101,7 @@ public class CommonAPI {
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false")String cloudEnvName,
                       @Optional("OS X") String os,@Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("34")
                               String browserVersion, @Optional("http://www.amazon.com") String url)throws IOException {
-        System.setProperty("webdriver.chrome.driver", "/Users/renxing/SeleniumTest18/WebAutomation/Generic/browser-driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/DriversForBrowser/chromedriver");
         if(useCloudEnv==true){
             if(cloudEnvName.equalsIgnoreCase("browserstack")) {
                 getCloudDriver(cloudEnvName,browserstack_username,browserstack_accesskey,os,os_version, browserName, browserVersion);
@@ -109,7 +109,7 @@ public class CommonAPI {
                 getCloudDriver(cloudEnvName,saucelabs_username, saucelabs_accesskey,os,os_version, browserName, browserVersion);
             }
         }else{
-            getLocalDriver(os, browserName);
+            getLocalDriver(os,browserName);
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
@@ -123,7 +123,7 @@ public class CommonAPI {
             }else if(OS.equalsIgnoreCase("Windows")){
                 System.setProperty("webdriver.chrome.driver", "../Generic/browser-driver/chromedriver.exe");
             }
-            driver = new ChromeDriver();
+            driver=new ChromeDriver();
         } else if(browserName.equalsIgnoreCase("chrome-options")){
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-notifications");
@@ -169,7 +169,7 @@ public class CommonAPI {
 
     @AfterMethod
     public void cleanUp(){
-        // driver.close();
+        driver.close();
     }
     /*//setup
     public static WebDriver driver=null;

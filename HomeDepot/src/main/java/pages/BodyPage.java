@@ -1,9 +1,10 @@
 package pages;
 
+import base.CommonAPIhd;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class BodyPage {
+public class BodyPage extends CommonAPIhd {
 @FindBy(css="#messageBar > div > div > div")
     public static WebElement deliveryLine;
 @FindBy(css="#container > div:nth-child(3) > div:nth-child(3) > div.col__12-12.col__12-12--xs.col__12-12--sm.col__12-12--md.col__12-12--lg.col__12-12--xl > div > div > a > img")

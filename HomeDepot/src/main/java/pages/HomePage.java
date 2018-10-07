@@ -1,13 +1,8 @@
 package pages;
 
-<<<<<<< Updated upstream
-import base.CommonAPI;
-=======
 import base.CommonAPIhd;
->>>>>>> Stashed changes
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 
 public class HomePage extends CommonAPIhd{
     @FindBy(css="#container > div:nth-child(2) > div.Header3 > div > div.grid.grid--center-verticle > div.Header3__collapser.col__4-12.col__3-12--sm.col__3-12--md.col__3-12--lg > div > div:nth-child(1) > a > svg > g > path:nth-child(3)")
@@ -20,8 +15,6 @@ public static WebElement balloon;
 public static WebElement toSeeInventory;
 @FindBy(css="#headerMyAccount > div.MyAccount__icon > div > div.HeaderIcon__primary > svg > g > path:nth-child(1)")
 public static WebElement littleMan;
-@FindBy(css="#headerMyAccount > div.MyAccount__icon > div > div.HeaderIcon__primary > svg")
-public static WebElement cart;
 @FindBy(css="#messageBar > div > div > div")
 public static WebElement free2DayDelivery;
 @FindBy(css="#container > div:nth-child(3) > div:nth-child(3) > div.col__12-12.col__12-12--xs.col__12-12--sm.col__12-12--md.col__12-12--lg.col__12-12--xl > div > div > a > img")
@@ -48,32 +41,14 @@ public static WebElement blinds;
 public static WebElement joinUsCelebrating;
 @FindBy(css="body > div.QSIFeedBackLink.SI_ehszkP3JIwnjF77_FeedBackLinkContainer > img")
 public static WebElement feedback;
-
-
-
-
-
-<<<<<<< Updated upstream
-public class HomePage extends CommonAPI{
-    @FindBy(css="#container > div:nth-child(2) > div.Header3 > div > div.grid.grid--center-verticle > div.Header3__collapser.col__4-12.col__3-12--sm.col__3-12--md.col__3-12--lg > div > div:nth-child(1) > a > svg > g > path:nth-child(4)")
-public static WebElement theHomeDepotMenuBar;
-@FindBy(className = "MyStore__label")
-public static WebElement toSeeInventoryMenuBar;
-@FindBy(css="#myStore > a > span.MyStore__icon > svg")
-public static WebElement balloonSignMenuBar;
 @FindBy(css = "#headerSearch")
-=======
-    @FindBy(css = "#headerSearch")
->>>>>>> Stashed changes
-    public static WebElement searchBox;
+public static WebElement searchBox;
     @FindBy(css = ".SearchBox__buttonIcon")
     public static WebElement submitButton;
 @FindBy(className="MyAccount__label SimpleFlyout__link--bold")
 public static WebElement myAccount;
 @FindBy(xpath = "//*[@id=\"headerMyAccount\"]/div[2]/div/div[1]/svg/g/path[2]")
 public static WebElement humanMenuBar;
-@FindBy(className ="MyCart__label")
-public static WebElement cart;
 @FindBy(className = "MyCart__itemCount__label")
 public static WebElement numberItems;
 @FindBy(css="#headerCart > div.MyCart__icon > div > div.HeaderIcon__primary > svg")
@@ -107,15 +82,6 @@ public static WebElement specialsOrders;
 @FindBy(css="#container > div:nth-child(2) > div.Header3 > div > div.grid.flush.hide.show--sm > div > ul > li:nth-child(6) > a")
 public static WebElement localAd;
 
-public void theHomeDepotMenuBar(){
-        theHomeDepotMenuBar.click();
-    }
-public void toSeeInventoryMenuBar(){
-        toSeeInventoryMenuBar.click();
-}
- public void balloonSignMenuBar(){
-        balloonSignMenuBar.click();
- }
 
     public void theHomeDepot(){
         theHomeDepot.click();
@@ -131,9 +97,6 @@ public void toSeeInventory(){
 }
 public void littleMan(){
         littleMan.click();
-}
-public void cart(){
-        cart.click();
 }
 public void free2DayDelivery(){
         free2DayDelivery.click();
@@ -174,17 +137,11 @@ public void joinUsCelebrating(){
 public void feedback(){
         feedback.click();
 }
-
-
-
-
-
-
-    public void searchBox() {
+public void searchBox() {
         searchBox.sendKeys("iphone");
     }
-    public void submitButton() { submitButton.click();
-    }
+    public void submitButton() { submitButton.click(); }
+
     public void clearInput() {
         searchBox.clear();
     }
@@ -193,9 +150,6 @@ public void myAccount(){
 }
 public void humanMenuBar(){
         humanMenuBar.click();
-}
-public void cart(){
-        cart.click();
 }
 public void numberItems(){
         numberItems.click();

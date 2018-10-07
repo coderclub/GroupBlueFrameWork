@@ -10,21 +10,13 @@
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="68.0"/>
     <parameter name="url" value="https://www.homedepot.com"/>
-<<<<<<< Updated upstream
-    <test name = "Services of tests">
+
         <classes>
-        <class name ="base.FirstTest" />
+        <!--<class name ="base.firstTest" />
             <class name="tests.HandlePopUpTest"/>
             <class name="tests.HomePageTest"/>
-            <class name="tests.SearchPageTest"/>
-=======
-
-    <test name = "tests services">
-        <classes>
-       <!-- <class name ="base.firstTest" />-->
-            <!--<class name="tests.HomePageTest"/>-->
-            <class name="tests.HandlePopUpTest"/>
->>>>>>> Stashed changes
+            <class name="tests.SearchPageTest"/>-->
+            <class name="tests.BodyPageTest"/>
         </classes>
     </test>
 </suite>

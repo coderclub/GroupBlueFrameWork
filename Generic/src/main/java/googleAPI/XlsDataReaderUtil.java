@@ -7,7 +7,7 @@ public class XlsDataReaderUtil {
     public static ArrayList<Object[]> getDataFromExcel(){
         ArrayList<Object[]> myData = new ArrayList<Object[]>();
         try {
-            reader = new Xls_Reader("/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Amazon2/data/dataofHomeDepot.xls");
+            reader = new Xls_Reader("/Users/renxing/IdeaProjects/GroupBlueFrameWork/Amazon2/data/dataofAmazon.xls");
         }
         catch (Exception e){
             e.printStackTrace();

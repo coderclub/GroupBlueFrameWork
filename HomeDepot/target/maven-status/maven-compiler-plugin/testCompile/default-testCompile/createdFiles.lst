@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-base/FirstTest.class
-tests/SearchPageTest.class
-=======
+tests/BodyPageTest.class
 tests/SearchPageTest.class
 base/firstTest.class
->>>>>>> Stashed changes
 tests/HomePageTest.class
 tests/HandlePopUpTest.class

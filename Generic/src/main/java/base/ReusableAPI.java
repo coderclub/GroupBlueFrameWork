@@ -33,11 +33,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ReusableAPI { //Remember this class is not reading from that TestRunner.xml.
 
-<<<<<<< Updated upstream
-    public WebDriver driver = null;
-=======
+
     public  WebDriver driver = null;
->>>>>>> Stashed changes
+
     public String browserstack_username= "ahmedullahferdou1";
     public String browserstack_accesskey = "DBZifqAsQVcPin9B6PeN";
     public String saucelabs_username = "";

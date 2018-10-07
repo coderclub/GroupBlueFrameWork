@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import reporting.TestLogger;
 
-public class HandlePopUp{
+public class HandlePopUp extends CommonAPIhd{
     //  css #Wrapper > div.SkinInner
     //class  NextButton Button
     //xpath #NextButton

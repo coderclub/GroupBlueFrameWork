@@ -19,12 +19,8 @@ public class GoogleSheetClass extends Login{
         // Build a new authorized API client service.
         Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
-<<<<<<< Updated upstream
-                .get(spreadsheetId, range).execute();
-=======
                 .get(spreadsheetId, range)
                 .execute();
->>>>>>> Stashed changes
         List<List<Object>> values = response.getValues();
         if (values == null || values.size() == 0) {
             return null;
@@ -40,27 +36,23 @@ public class GoogleSheetClass extends Login{
         driver.navigate().to("https://ecams.geico.com/ecams/login.xhtml?r=true");
         List<String> actual = new ArrayList<>();
         for (List row : col2Value) {
-<<<<<<< Updated upstream
             Thread.sleep(3000);
             inputValueInTextBoxByWebElement(loginTextBox, row.get(1).toString());
             inputValueInTextBoxByWebElement(passwordTextBox, row.get(2).toString());
             Thread.sleep(3000);
-=======
+
             Thread.sleep(5000);
             inputValueInTextBoxByWebElement(loginTextBox, row.get(1).toString());
             inputValueInTextBoxByWebElement(passwordTextBox, row.get(2).toString());
             Thread.sleep(5000);
->>>>>>> Stashed changes
+
             //actual.add(getCurrentPageTitle());
             actual.add(getTextByWebElement(errorMessage));
             System.out.println(getTextByWebElement(errorMessage));
             clearInputBox(loginTextBox);
             clearInputBox(passwordTextBox) ;
-<<<<<<< Updated upstream
             Thread.sleep(3000);
-=======
             Thread.sleep(5000);
->>>>>>> Stashed changes
         }
         return actual;
     }

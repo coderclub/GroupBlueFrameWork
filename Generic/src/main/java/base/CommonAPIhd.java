@@ -19,7 +19,7 @@ public class CommonAPIhd {
 
     @BeforeMethod
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "/Users/renxing/Desktop/clone from github/GroupBlueFrameWork/Generic/DriversForBrowser/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/renxing/IdeaProjects/GroupBlueFrameWork/Generic/DriversForBrowser/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
