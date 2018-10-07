@@ -29,7 +29,7 @@ public class DropDown extends CommonClass {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         return ConnectToMongoDB.readFromMongoDB("dropDown","dropDownList");
     }
-    public void comparePolicyData(){
+    public void compareDropDownData(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<String> expectedData = getAccessYourPolicyList();
         List<String> actualData = getPolicyDataFromDB();
