@@ -28,7 +28,9 @@ public class LoginWithGoogleSheet extends LoginWithExcel {
         }
     }
 
-    public void signInByInvalidIdPass(String spreadsheetId, String range) throws IOException, InterruptedException {
+    public void signInByInvalidIdPass() throws IOException, InterruptedException {
+       String spreadsheetId ="1H0JiWbL-Hq9to5oI21m65xpY0OQzJ4qCLjdzqbFgy6c";
+       String range= "Sheet1!A2:C";
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         navigateToLoginPage();
         List<List<Object>> col2Value = getSpreadSheetRecords(spreadsheetId, range);

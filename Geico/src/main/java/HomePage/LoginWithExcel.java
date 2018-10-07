@@ -50,7 +50,7 @@ public class LoginWithExcel extends CommonClass{
     }
     @DataProvider
     public Iterator<Object[]> supplyData(){
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        //TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         ArrayList<Object[]> testData =
                 XlsDataReaderUtil.getDataFromExcel();
         return testData.iterator();
