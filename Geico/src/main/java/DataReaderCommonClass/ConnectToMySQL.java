@@ -63,10 +63,8 @@ public class ConnectToMySQL {
                 Connection con = connectToMySQL();
                 Statement st = con.createStatement();
                 String query = "select * from " + tableName;
-                //st.executeUpdate("insert into pnt(stdId,stName) values(8,'bah')");
                 ResultSet rs = st.executeQuery(query);
                 while(rs.next()){
-                    //System.out.println("Data"+rs.getString("stdId")+" "+rs.getString("stName"));
                     warning.add(rs.getString(columnName));
                 }
             }catch(Exception e){

@@ -13,11 +13,11 @@ import java.util.List;
 
 public class DropDown extends CommonClass {
     @FindBy(id="homepage_manage_select")
-    public static WebElement dropDownWebelement;
+    public static WebElement accessYourPolicyDropDown;
 
-    public List<String> getDropDownList(){
+    public List<String> getAccessYourPolicyList(){
        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-       Select dropDown = new Select(dropDownWebelement);
+       Select dropDown = new Select(accessYourPolicyDropDown);
        List<WebElement> dropDownList = dropDown.getOptions();
        List<String> dropDownListText = new ArrayList<>();
         for(WebElement it:dropDownList) {
@@ -25,14 +25,14 @@ public class DropDown extends CommonClass {
         }
         return dropDownListText;
     }
-    public List<String> getDropDownDataFromDB(){
+    public List<String> getPolicyDataFromDB(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         return ConnectToMongoDB.readFromMongoDB("dropDown","dropDownList");
     }
-    public void compareDropDownData(){
+    public void comparePolicyData(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        List<String> expectedData = getDropDownList();
-        List<String> actualData = getDropDownDataFromDB();
+        List<String> expectedData = getAccessYourPolicyList();
+        List<String> actualData = getPolicyDataFromDB();
         for(int i=0;i<actualData.size();i++){
             Assert.assertEquals(actualData.get(i),expectedData.get(i));
         }

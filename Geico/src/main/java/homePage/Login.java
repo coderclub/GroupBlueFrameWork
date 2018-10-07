@@ -35,7 +35,6 @@ public class Login extends CommonClass{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         webElement.clear();
     }
-
     public String SendLoginInfo(String email, String password) throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         loginTextBox.sendKeys(email);
@@ -51,7 +50,7 @@ public class Login extends CommonClass{
     }
     @DataProvider
     public Iterator<Object[]> supplyData(){
-        //TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         ArrayList<Object[]> testData =
                 XlsDataReaderUtil.getDataFromExcelFM();
         return testData.iterator();
