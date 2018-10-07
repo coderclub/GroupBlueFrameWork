@@ -5,13 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import reporting.TestLogger;
 
 public class Feedback extends CommonClass{
 
    @FindBy(name = "OnlineOpinion1")
-    public static WebElement iframe;
+    public static WebElement feedbackFrame;
     @FindBy(xpath = "//label[@for='overall_0']")
     public static WebElement veryDissatisfiedIcon;
     @FindBy(xpath = "//label[@for='overall_1']")
@@ -32,7 +31,7 @@ public class Feedback extends CommonClass{
     public void switchToFrame(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         driver.findElement(By.id("oo_tab")).click();
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(iframe));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(feedbackFrame));
     }
     public void selectSatisfactionIcon(WebElement element){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName())+" Satisfaction level: "+element.getText());
