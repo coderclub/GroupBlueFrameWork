@@ -19,7 +19,6 @@ public class GoogleSheetClass extends Login {
     Login loginObject = PageFactory.initElements(driver,Login.class);
 
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
-        // Build a new authorized API client service.
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         Sheets service = getSheetsService();
         ValueRange response = service.spreadsheets().values()
@@ -30,9 +29,9 @@ public class GoogleSheetClass extends Login {
             return null;
         } else {
             return values;
-
         }
     }
+
     public void signInByInvalidIdPass(String spreadsheetId, String range) throws IOException, InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         navigateToLoginPage();
@@ -42,6 +41,5 @@ public class GoogleSheetClass extends Login {
            String actualMessage = row.get(2).toString();
            Assert.assertEquals(actualMessage,expectedMessage);
         }
-
     }
 }

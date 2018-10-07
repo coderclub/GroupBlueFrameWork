@@ -1,16 +1,16 @@
 package testNavigationBar;
 
-import navigationBar.NavFirstClickMenu;
+import navigationBar.InformationAndInsuranceMenu;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import reporting.TestLogger;
 
-public class NavFirstClickMenuTest extends NavFirstClickMenu {
-    NavFirstClickMenu object;
+public class InformationAndInsuranceMenuTest extends navigationBar.InformationAndInsuranceMenu {
+    navigationBar.InformationAndInsuranceMenu object;
     @BeforeMethod
     public void init(){
-        object = PageFactory.initElements(driver, NavFirstClickMenu.class);
+        object = PageFactory.initElements(driver, navigationBar.InformationAndInsuranceMenu.class);
     }
     @Test
    public void testInformationMenuItems() {

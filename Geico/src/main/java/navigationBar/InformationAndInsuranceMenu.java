@@ -10,7 +10,7 @@ import reporting.TestLogger;
 
 import java.util.List;
 
-public class NavFirstClickMenu extends CommonClass {
+public class InformationAndInsuranceMenu extends CommonClass {
     @FindBy(css = "ul.desktop-links > li:nth-child(2)>a")
     public static WebElement information;
     public static String informationDivPath = "//div[@data-side-panel='information']/ul";
