@@ -43,4 +43,8 @@ public class NavigationBarTest extends NavigationBar {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         Assert.assertEquals("https://www.geico.com/",clickOnGeicoLogo());
     }
+    @Test
+    public void testKeywordFromExcel() throws InterruptedException {
+        sendKeywordFromExcel();
+    }
 }

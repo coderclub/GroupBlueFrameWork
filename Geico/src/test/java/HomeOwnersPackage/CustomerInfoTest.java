@@ -23,11 +23,6 @@ public class CustomerInfoTest extends CustomerInfo{
         Assert.assertEquals("The effective date of your policy can range from 1-59 days in the future. This is the date your coverage will begin.",clickToolTip(coverageDateTip,coverageDateTipText));
     }
     @Test
-    public void testDOB() throws InterruptedException {
-        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        System.out.println(clickToolTip(dateOfBirthTip,dateOfBirthTipText));
-    }
-    @Test
     public void testWarning1() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         compareWarningMessage();
@@ -51,4 +46,5 @@ public class CustomerInfoTest extends CustomerInfo{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         Assert.assertEquals(true,isDivVisible(div4));
     }
+
 }

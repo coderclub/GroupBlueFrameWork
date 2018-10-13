@@ -1,9 +1,13 @@
 package NavBar;
 
 import base.CommonClass;
+import base.Xls_Reader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import reporting.TestLogger;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NavigationBar extends CommonClass {
     @FindBy(css = "ul.desktop-links > li:nth-child(2)>a")
@@ -66,5 +70,50 @@ public class NavigationBar extends CommonClass {
         searchIcon.click();
         Thread.sleep(2000);
         return searchDiv.isDisplayed();
+    }
+    public void select(String keyword) throws InterruptedException {
+        switch (keyword){
+            case "insurance":
+                clickOnInsurance();
+                break;
+            case "information":
+                clickOnInformation();
+                break;
+            case "location":
+                clickOnLocationIcon();
+                break;
+            case "login":
+                clickLogin();
+                break;
+            case "search":
+                clickOnSearchIcon();
+                break;
+            case "logo":
+                clickOnGeicoLogo();
+                break;
+        }
+    }
+    static Xls_Reader reader;
+
+    public static List<String> getDataFromExcel(){
+
+        List<String> myData = new ArrayList<>();
+        try {
+            reader = new Xls_Reader("/Users/afia/IdeaProjects/GroupBlueFrameWork/Geico/data/keyWordDriven.xls");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        for (int rowNum =2; rowNum <= reader.getRowCount("Sheet1"); rowNum++){
+            String  keyWord = reader.getCellData("Sheet1", "keyword",rowNum );
+            myData.add(keyWord);
+        }
+        return  myData;
+    }
+    public void sendKeywordFromExcel() throws InterruptedException {
+        List<String> data = getDataFromExcel();
+        for (String st:data){
+            select(st);
+        }
     }
 }
