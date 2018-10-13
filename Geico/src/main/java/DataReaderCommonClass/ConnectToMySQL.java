@@ -62,7 +62,7 @@ public class ConnectToMySQL {
             try{
                 Connection con = connectToMySQL();
                 Statement st = con.createStatement();
-                String query = "select * from " + tableName;
+                String query = "navBarClickWithExcelKeyword * from " + tableName;
                 ResultSet rs = st.executeQuery(query);
                 while(rs.next()){
                     warning.add(rs.getString(columnName));

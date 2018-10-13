@@ -16,35 +16,35 @@ public class NavigationBarTest extends NavigationBar {
     @Test
     public void testClickInsurance() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals(true,clickOnInsurance());
+        clickOnInsurance();
     }
     @Test
     public void testClickInformation() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals(true,clickOnInformation());
+       clickOnInformation();
     }
     @Test
     public void testClickLocation()throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals(true,clickOnLocationIcon());
+        clickOnLocationIcon();
     }
     @Test
     public void testClickLogin()throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertTrue(clickLogin());
+        clickLogin();
     }
     @Test
     public void testClickSearchIcon()throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals(true,clickOnSearchIcon());
+        clickOnSearchIcon();
     }
     @Test
     public void testClickOnGeicoLogo()throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("https://www.geico.com/",clickOnGeicoLogo());
+        clickOnGeicoLogo();
     }
     @Test
-    public void testKeywordFromExcel() throws InterruptedException {
+    public void testnavBarClickWithExcelKeyword() throws InterruptedException {
         sendKeywordFromExcel();
     }
 }

@@ -54,7 +54,7 @@ public class CustomerInformation extends CommonClass{
         clickContinue();
     }
     public void city(){
-        Select cityDropDown = new Select(driver.findElement(By.xpath("//select[@id='CustomerInformationViewData_NIP015PIPropertyCityList']")));
+        Select cityDropDown = new Select(driver.findElement(By.xpath("//navBarClickWithExcelKeyword[@id='CustomerInformationViewData_NIP015PIPropertyCityList']")));
         List<WebElement> cityOptions = cityDropDown.getOptions();
         for(WebElement wb:cityOptions){
             System.out.println(wb.getText());

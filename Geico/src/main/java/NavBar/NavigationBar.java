@@ -1,13 +1,11 @@
 package NavBar;
 
 import base.CommonClass;
-import base.ReusableAPI;
-import base.Xls_Reader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 import reporting.TestLogger;
 
-import java.util.ArrayList;
 import java.util.List;
 import DataReaderCommonClass.ReadFromExcel;
 
@@ -36,44 +34,44 @@ public class NavigationBar extends CommonClass{
     @FindBy(xpath = "//div[@data-side-panel='search']")
     public static WebElement searchDiv;
 
-    public boolean clickOnInsurance() throws InterruptedException {
+    public void clickOnInsurance() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         insurance.click();
         Thread.sleep(2000);
-        return insuranceDiv.isDisplayed();
+        Assert.assertEquals(true,insuranceDiv.isDisplayed());
     }
-    public boolean clickOnInformation() throws InterruptedException {
+    public void clickOnInformation() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         information.click();
         Thread.sleep(2000);
-        return infoDiv.isDisplayed();
+        Assert.assertEquals(true,infoDiv.isDisplayed());
     }
-    public String clickOnGeicoLogo() throws InterruptedException{
+    public void clickOnGeicoLogo() throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         geicoLogo.click();
         Thread.sleep(2000);
         String Url = driver.getCurrentUrl();
-        return Url;
+        Assert.assertEquals("https://www.geico.com/",Url);
     }
-    public boolean clickOnLocationIcon()throws InterruptedException{
+    public void clickOnLocationIcon()throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         locationIcon.click();
         Thread.sleep(2000);
-        return locationDiv.isDisplayed();
+        Assert.assertEquals(true,locationDiv.isDisplayed());
     }
-    public boolean clickLogin() throws InterruptedException{
+    public void clickLogin() throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         locationIcon.click();
         Thread.sleep(2000);
-        return loginDiv.isDisplayed();
+        Assert.assertTrue(loginDiv.isDisplayed());
     }
-    public boolean clickOnSearchIcon()throws InterruptedException{
+    public void clickOnSearchIcon()throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchIcon.click();
         Thread.sleep(2000);
-        return searchDiv.isDisplayed();
+        Assert.assertEquals(true,searchDiv.isDisplayed());
     }
-    public void select(String keyword) throws InterruptedException {
+    public void navBarClickWithExcelKeyword(String keyword) throws InterruptedException {
         switch (keyword){
             case "insurance":
                 clickOnInsurance();
@@ -95,14 +93,11 @@ public class NavigationBar extends CommonClass{
                 break;
         }
     }
-    static Xls_Reader reader;
-
-
     public void sendKeywordFromExcel() throws InterruptedException {
         ReadFromExcel objReadFromObject = new ReadFromExcel();
         List<String> data = objReadFromObject.getDataFromExcelForKeywordDriven();
         for (String st:data){
-            select(st);
+            navBarClickWithExcelKeyword(st);
         }
     }
 }
