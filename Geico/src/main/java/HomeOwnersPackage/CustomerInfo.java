@@ -94,4 +94,28 @@ public class CustomerInfo extends CommonClass{
         for (int i=0; i<actualText.size();i++)
             Assert.assertEquals(actualText.get(i),warningText.get(i));
     }
+    public void streetTipText() throws InterruptedException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        Assert.assertEquals(clickToolTip(streetTip,streetTipText),"This is the actual address of the home, apartment or condo where you reside, and that you desire to insure.");
+    }
+    public void coverageDateTipText()throws InterruptedException{
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        Assert.assertEquals("The effective date of your policy can range from 1-59 days in the future. This is the date your coverage will begin.",clickToolTip(coverageDateTip,coverageDateTipText));
+    }
+    public void divOneVisible() throws InterruptedException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        Assert.assertEquals(true,isDivVisible(div1));
+    }
+    public void divTwoVisible() throws InterruptedException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        Assert.assertEquals(true,isDivVisible(div2));
+    }
+    public void divThreeVisible() throws InterruptedException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        Assert.assertEquals(true,isDivVisible(div3));
+    }
+    public void divFourVisible() throws InterruptedException {
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        Assert.assertEquals(true,isDivVisible(div4));
+    }
 }

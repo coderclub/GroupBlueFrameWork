@@ -15,12 +15,12 @@ public class CustomerInfoTest extends CustomerInfo{
     @Test
     public void testStreetTipText() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("This is the actual address of the home, apartment or condo where you reside, and that you desire to insure.",clickToolTip(streetTip,streetTipText));
+        streetTipText();
     }
     @Test
     public void testCoverageDateTipText()throws InterruptedException{
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("The effective date of your policy can range from 1-59 days in the future. This is the date your coverage will begin.",clickToolTip(coverageDateTip,coverageDateTipText));
+        coverageDateTipText();
     }
     @Test
     public void testWarning1() throws InterruptedException {
@@ -30,21 +30,20 @@ public class CustomerInfoTest extends CustomerInfo{
     @Test
     public void isDivOneVisible() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals(true,isDivVisible(div1));
+        divOneVisible();
     }
     @Test
     public void isDivTwoVisible() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals(true,isDivVisible(div2));
+        divTwoVisible();
     }
     @Test
     public void isDivThreeVisible() throws InterruptedException {
-        Assert.assertEquals(true,isDivVisible(div3));
+        divThreeVisible();
     }
     @Test
     public void isDivFourVisible() throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals(true,isDivVisible(div4));
+        divFourVisible();
     }
-
 }
