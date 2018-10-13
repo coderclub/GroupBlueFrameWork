@@ -1,11 +1,12 @@
 package HomeOwnersPackage;
 
 import base.CommonClass;
+import base.ReusableAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import reporting.TestLogger;
 
-public class PromptToCall extends CommonClass {
+public class PromptToCall extends CommonClass{
     @FindBy(className="errorheader")
     WebElement errorHeadline;
     @FindBy(xpath = "//*[@id=\"home-get-a-quote\"]/div[1]/div/div/p[1]")

@@ -13,7 +13,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -43,9 +45,10 @@ public class ReusableAPI { //Remember this class is not reading from that TestRu
 
     @Parameters({"useCloudEnv","cloudEnvName","os","os_version","browserName","browserVersion","url"})
     @BeforeMethod
+    //https://www.santanderbank.com/us/personal
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false")String cloudEnvName,
                       @Optional("OS X") String os,@Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("34")
-                              String browserVersion, @Optional("https://www.santanderbank.com/us/personal") String url)throws IOException {
+                              String browserVersion, @Optional("https://www.geico.com") String url)throws IOException {
         System.setProperty("webdriver.chrome.driver", "../Generic/DriversForBrowser/chromedriver");
         if(useCloudEnv==true){
             if(cloudEnvName.equalsIgnoreCase("browserstack")) {
@@ -207,10 +210,18 @@ public class ReusableAPI { //Remember this class is not reading from that TestRu
         String text = webElement.getText();
         return text;
     }
-
     public static String convertToString(String st){
         String splitString ;
         splitString = StringUtils.join(StringUtils.splitByCharacterTypeCamelCase(st), ' ');
         return splitString;
+    }
+
+    public void waitToBeVisible(WebElement element){
+         WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+    public void waitToBeVisible(String xpathLocator){
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathLocator)));
     }
 }

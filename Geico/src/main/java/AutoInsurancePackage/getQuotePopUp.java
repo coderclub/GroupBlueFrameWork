@@ -1,11 +1,12 @@
 package AutoInsurancePackage;
 
 import base.CommonClass;
+import base.ReusableAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import reporting.TestLogger;
 
-public class getQuotePopUp extends CommonClass {
+public class getQuotePopUp extends CommonClass{
     @FindBy(xpath = "//div[@class='card-selections-card']//label")
     public static WebElement firstQuote;
     @FindBy(xpath = "//div[@class='button-bar']//button[@class='btn btn--primary btn--full-mobile']")

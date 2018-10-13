@@ -29,7 +29,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class CommonClass{
+public class CommonClass {
     public static WebDriver driver = null;
     public static Actions builder = null;
     public static WebDriverWait wait = null ;

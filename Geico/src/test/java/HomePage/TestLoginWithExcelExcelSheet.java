@@ -16,12 +16,11 @@ public class TestLoginWithExcelExcelSheet extends LoginWithExcel {
     @BeforeMethod
     public void init(){
         loginObject = PageFactory.initElements(driver, LoginWithExcel.class);
-
+        navigateToLoginPage();
     }
     @Test(dataProvider = "supplyData")
     public void signInWithInvalidIDPassUsingExcel(String email, String passCode, String message) throws InterruptedException {
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        navigateToLoginPage();
         String errMessage = SendLoginInfo(email, passCode);
         Assert.assertEquals(message,errMessage);
     }

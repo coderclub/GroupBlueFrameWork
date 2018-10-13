@@ -1,10 +1,11 @@
 package AutoInsurancePackage;
 
 import base.CommonClass;
+import base.ReusableAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AutoInsuranceCustomerInfo extends CommonClass {
+public class AutoInsuranceCustomerInfo extends CommonClass{
     getQuotePopUp obj = new getQuotePopUp();
     @FindBy(id = "firstName-error")
     WebElement firstNameErrorMessage;

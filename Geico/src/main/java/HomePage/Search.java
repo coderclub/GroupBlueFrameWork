@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import reporting.TestLogger;
 
-public class Search extends CommonClass {
+public class Search extends CommonClass{
     @FindBy(xpath = "//*[@id=\"primary-navigation\"]/div[6]/form/input")
     public static WebElement searchTextBox;
     @FindBy(xpath = "//*[@id=\"primary-navigation\"]/div[6]/form/button")

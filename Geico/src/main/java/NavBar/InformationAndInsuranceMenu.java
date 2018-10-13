@@ -2,6 +2,7 @@ package NavBar;
 
 import DataReaderCommonClass.ConnectToMongoDB;
 import base.CommonClass;
+import base.ReusableAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import reporting.TestLogger;
 
 import java.util.List;
 
-public class InformationAndInsuranceMenu extends CommonClass {
+public class InformationAndInsuranceMenu extends CommonClass{
     @FindBy(css = "ul.desktop-links > li:nth-child(2)>a")
     public static WebElement information;
     public static String informationDivPath = "//div[@data-side-panel='information']/ul";

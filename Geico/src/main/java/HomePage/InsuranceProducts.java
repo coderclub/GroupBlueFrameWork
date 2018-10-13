@@ -1,13 +1,14 @@
 package HomePage;
 
 import base.CommonClass;
+import base.ReusableAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import reporting.TestLogger;
 
-public class InsuranceProducts extends CommonClass {
+public class InsuranceProducts extends CommonClass{
     @FindBy(how = How.CSS, using = "#submitButton")
     public static WebElement submitButton;
     @FindBy(how=How.ID, using = "zip")

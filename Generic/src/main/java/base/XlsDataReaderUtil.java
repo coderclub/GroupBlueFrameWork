@@ -8,7 +8,7 @@ public class XlsDataReaderUtil {
 
     static Xls_Reader reader;
 
-    public static ArrayList<Object[]> getDataFromExcel(){
+    public static ArrayList<Object[]> getDataFromExcelForLogin(){
 
     ArrayList<Object[]> myData = new ArrayList<Object[]>();
     try {

@@ -1,6 +1,7 @@
 package NavBar;
 
 import base.CommonClass;
+import base.ReusableAPI;
 import base.Xls_Reader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,8 +9,9 @@ import reporting.TestLogger;
 
 import java.util.ArrayList;
 import java.util.List;
+import DataReaderCommonClass.ReadFromExcel;
 
-public class NavigationBar extends CommonClass {
+public class NavigationBar extends CommonClass{
     @FindBy(css = "ul.desktop-links > li:nth-child(2)>a")
     public static WebElement information;
     @FindBy(css = "#header-left-links > ul> li > a")
@@ -95,23 +97,10 @@ public class NavigationBar extends CommonClass {
     }
     static Xls_Reader reader;
 
-    public static List<String> getDataFromExcel(){
 
-        List<String> myData = new ArrayList<>();
-        try {
-            reader = new Xls_Reader("/Users/afia/IdeaProjects/GroupBlueFrameWork/Geico/data/keyWordDriven.xls");
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        for (int rowNum =2; rowNum <= reader.getRowCount("Sheet1"); rowNum++){
-            String  keyWord = reader.getCellData("Sheet1", "keyword",rowNum );
-            myData.add(keyWord);
-        }
-        return  myData;
-    }
     public void sendKeywordFromExcel() throws InterruptedException {
-        List<String> data = getDataFromExcel();
+        ReadFromExcel objReadFromObject = new ReadFromExcel();
+        List<String> data = objReadFromObject.getDataFromExcelForKeywordDriven();
         for (String st:data){
             select(st);
         }

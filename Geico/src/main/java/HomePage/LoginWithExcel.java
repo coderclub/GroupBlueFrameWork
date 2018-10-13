@@ -1,5 +1,6 @@
 package HomePage;
 
+import base.ReusableAPI;
 import base.XlsDataReaderUtil;
 import base.CommonClass;
 import org.openqa.selenium.By;
@@ -50,9 +51,8 @@ public class LoginWithExcel extends CommonClass{
     }
     @DataProvider
     public Iterator<Object[]> supplyData(){
-        //TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         ArrayList<Object[]> testData =
-                XlsDataReaderUtil.getDataFromExcel();
+                XlsDataReaderUtil.getDataFromExcelForLogin();
         return testData.iterator();
     }
 

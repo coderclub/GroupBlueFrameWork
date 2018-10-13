@@ -1,10 +1,13 @@
 package HomePage;
 
 import base.CommonClass;
+import base.ReusableAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import reporting.TestLogger;
 
 public class Feedback extends CommonClass{
@@ -31,6 +34,7 @@ public class Feedback extends CommonClass{
     public void switchToFrame(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         driver.findElement(By.id("oo_tab")).click();
+        WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(feedbackFrame));
     }
     public void selectSatisfactionIcon(WebElement element){
@@ -46,6 +50,7 @@ public class Feedback extends CommonClass{
         switchToFrame();
         selectSatisfactionIcon(element);
         clickSubmit();
+        WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("tyMessage")));
     }
     public String getThankYouForFeedbackMessageHeader(WebElement element){
@@ -63,5 +68,35 @@ public class Feedback extends CommonClass{
     }
     public String getActualThankYouBody(){
         return "While we research each report we receive, we cannot guarantee that your comment will receive a response.";
+    }
+    public void veryDissatisfiedHeaderMessage(){
+        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(veryDissatisfiedIcon));
+    }
+    public void veryDissatisfiedBodyMessage(){
+        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(veryDissatisfiedIcon));
+    }
+    public void dissatisfiedHeaderMessage(){
+        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(dissatisfiedIcon));
+    }
+    public void dissatisfiedBodyMessage(){
+        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(dissatisfiedIcon));
+    }
+    public void somewhatSatisfiedHeaderMessage(){
+        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(somewhatSatisfiedIcon));
+    }
+    public void somewhatSatisfiedBodyMessage(){
+        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(somewhatSatisfiedIcon));
+    }
+    public void satisfiedHeaderMessage(){
+        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(satisfiedIcon));
+    }
+    public void satisfiedBodyMessage(){
+        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(satisfiedIcon));
+    }
+    public void verySatisfiedHeaderMessage(){
+        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(verySatisfiedIcon));
+    }
+    public void verySatisfiedBodyMessage(){
+        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(verySatisfiedIcon));
     }
 }

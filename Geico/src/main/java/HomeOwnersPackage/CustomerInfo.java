@@ -3,6 +3,7 @@ package HomeOwnersPackage;
 import DataReaderCommonClass.ConnectToMySQL;
 import base.CommonClass;
 import HomePage.InsuranceProducts;
+import base.ReusableAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,7 +13,7 @@ import reporting.TestLogger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerInfo extends CommonClass {
+public class CustomerInfo extends CommonClass{
     InsuranceProducts object = PageFactory.initElements(driver,InsuranceProducts.class);
     ConnectToMySQL connect = new ConnectToMySQL();
     //test of texts shown in all the help tool tips.

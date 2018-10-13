@@ -18,42 +18,42 @@ public class FeedbackTest extends Feedback{
     }
     @Test
     public void testVeryDissatisfiedHeaderMessage(){
-        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(veryDissatisfiedIcon));
+        veryDissatisfiedHeaderMessage();
     }
     @Test
     public void testVeryDissatisfiedBodyMessage(){
-        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(veryDissatisfiedIcon));
+        veryDissatisfiedBodyMessage();
     }
     @Test
     public void testDissatisfiedHeaderMessage(){
-        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(dissatisfiedIcon));
+        dissatisfiedHeaderMessage();
     }
     @Test
     public void testDissatisfiedBodyMessage(){
-        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(dissatisfiedIcon));
+        dissatisfiedBodyMessage();
     }
     @Test
     public void testSomewhatSatisfiedHeaderMessage(){
-        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(somewhatSatisfiedIcon));
+        somewhatSatisfiedHeaderMessage();
     }
     @Test
     public void testSomewhatSatisfiedBodyMessage(){
-        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(somewhatSatisfiedIcon));
+        somewhatSatisfiedBodyMessage();
     }
     @Test
     public void testSatisfiedHeaderMessage(){
-        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(satisfiedIcon));
+        satisfiedHeaderMessage();
     }
     @Test
     public void testSatisfiedBodyMessage(){
-        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(satisfiedIcon));
+        satisfiedBodyMessage();
     }
     @Test
     public void testVerySatisfiedHeaderMessage(){
-        Assert.assertEquals(getActualThankYouHeader(),getThankYouForFeedbackMessageHeader(verySatisfiedIcon));
+        verySatisfiedHeaderMessage();
     }
     @Test
     public void testVerySatisfiedBodyMessage(){
-        Assert.assertEquals(getActualThankYouBody(),getThankYouForFeedbackMessageBody(verySatisfiedIcon));
+        verySatisfiedBodyMessage();
     }
 }

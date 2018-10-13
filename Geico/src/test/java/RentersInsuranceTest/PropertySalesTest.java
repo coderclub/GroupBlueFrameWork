@@ -15,26 +15,26 @@ public class PropertySalesTest extends PropertySales {
     @Test
     public void testClickOnHomeOwnersRD(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("https://propertysales.geico.com/CustomerInformation",clickOnElementRD(homeOwnersRD));
-    }
+        clickOnHomeOwnersRD();
+        }
     @Test
     public void testClickOnRentersRD(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("https://propertysales.geico.com/Diva/Conversation",clickOnElementRD(rentersRD));
-    }
+       clickOnRentersRD();
+       }
     @Test
     public void testClickOnCondoRD(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("https://propertysales.geico.com/CustomerInformation",clickOnElementRD(condoRD));
-    }
+        clickOnCondoRD();
+       }
     @Test
     public void testClickOnMobileHomeRD(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("https://propertysales.geico.com/MobileHome/PleaseCall",clickOnElementRD(mobileHomeRD));
-    }
+        clickOnMobileHomeRD();
+      }
     @Test
     public void testClickOnLandLordRD(){
         TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
-        Assert.assertEquals("https://propertysales.geico.com/CustomerInformation",clickOnElementRD(landLordRD));
+       clickOnLandLordRD();
     }
 }

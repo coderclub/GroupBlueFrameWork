@@ -10,7 +10,7 @@ import java.util.List;
 
 import static base.GoogleSheetReader.getSheetsService;
 
-public class LoginWithGoogleSheet extends LoginWithExcel {
+public class LoginWithGoogleSheet extends LoginWithExcel{
     LoginWithExcel loginObject = PageFactory.initElements(driver, LoginWithExcel.class);
 
     public List<List<Object>> getSpreadSheetRecords(String spreadsheetId, String range) throws IOException {
