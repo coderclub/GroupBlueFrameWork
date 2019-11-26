@@ -1,0 +1,129 @@
+package Experiment;
+
+import java.io.File;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.lang.reflect.Method;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.LogStatus;
+import base.CommonClass;
+import base.LoginInitial;
+import objects.Objects;
+import reporting.ExtentManager;
+import reporting.ExtentTestManager;
+
+public class BaseClass {
+	public static WebDriverWait wait;
+	public static WebDriver driver;
+	public static JavascriptExecutor js;
+	public static ExtentReports extent;
+	public static Objects obj;
+
+	@BeforeMethod
+	public WebDriver SetUp() throws Exception
+	{		
+		driver = Launch(LoginInitial.getInstance().getUrl());   //LoginInitial is another class where i used config.properties file for login credentials
+		//driver = LaunchHeadless(LoginInitial.getInstance().getUrl());
+		wait = new WebDriverWait(driver, LoginInitial.getInstance().getImplicitlyWait());
+		js = ((JavascriptExecutor)driver);	
+		obj = new Objects(driver);
+		return driver;
+	}
+	public static WebDriver LaunchHeadless(String url) //headless driver
+	{
+		File path = new File("webDriver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", path.getAbsolutePath());
+		ChromeOptions options = new ChromeOptions();
+		options.setHeadless(true);
+		options.addArguments("--window-size=1920x1080");
+		ChromeDriver driver = new ChromeDriver(options);
+		driver.get(url);
+		return driver;
+	}
+	
+	public static WebDriver Launch(String url)
+	{
+		File path = new File("webDriver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", path.getAbsolutePath());
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(url);
+		return driver;
+	}
+	
+
+	@BeforeSuite
+	public void extentSetup(ITestContext context) {
+		extent = ExtentManager.getInstance();	//initiating extent in @BeforeSuite so it can cover the whole test suite
+	}
+	
+	@BeforeMethod()
+	public void startExtent(Method method, Object[] testData) {	//this will initialize the test name and test class
+		String className = method.getDeclaringClass().getSimpleName();
+		String methodName = method.getName();
+		ExtentTestManager.startTest(methodName);
+		ExtentTestManager.getTest().assignCategory(className);
+	}
+	
+	protected String getStackTrace(Throwable t) {	//this is nothing just wanna get the stacktrace for error, you can call directly on your failed testcase
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter(sw);
+		t.printStackTrace(pw);
+		return sw.toString();
+	}
+	
+	private Date getTime(long millis) {	//getting current date and time so extent report will contain time of test
+		Calendar calender = Calendar.getInstance();
+		calender.setTimeInMillis(millis);
+		return calender.getTime();
+	}
+	
+	@AfterMethod
+	public void afterEachTestMethod(ITestResult result) {	//this aftermethod will initialized pass and failed test case
+		ExtentTestManager.getTest().setStartedTime(getTime(result.getStartMillis()));
+		ExtentTestManager.getTest().setEndedTime(getTime(result.getStartMillis()));
+		
+		for (String group : result.getMethod().getGroups()) {
+			ExtentTestManager.getTest().assignCategory(group);
+		}
+		if (result.getStatus() == 1) {
+			ExtentTestManager.getTest().log(LogStatus.PASS, "Test Passed");
+		}
+		else if (result.getStatus() == 2) {
+			ExtentTestManager.getTest().log(LogStatus.FAIL, getStackTrace(result.getThrowable()));
+		}
+		else if (result.getStatus() == 3) {
+			ExtentTestManager.getTest().log(LogStatus.SKIP, "Test Skipped");
+		}
+		
+		ExtentTestManager.endTest();
+		extent.flush();	//flush extent here
+		if (result.getStatus() == ITestResult.FAILURE) {
+			CommonClass.CaptureScreenShot(driver, result.getName());  //make static and call your screenshot method upon failure
+		}
+		driver.quit();
+	}
+	
+	@AfterSuite
+	public void generateReport() {
+		System.out.println("Report is Generated");
+		extent.close();	//close extent here
+	}
+}
+
